@@ -77,7 +77,7 @@ final case class Game(frames: List[Frame], finalFrame: FinalFrame) {
               case FinalFrame.Strike(bonus1, bonus2) =>
                 state.score + 30 + (10 + 10 + bonus1) + (10 + bonus1 + bonus2)
               case FinalFrame.Spare(roll, bonus) =>
-                state.score + (20 + roll) + (10 + roll) + (10 + bonus)
+                state.score + (20 + roll) + (10 + 10) + (10 + bonus)
               case FinalFrame.Open(roll1, roll2) =>
                 state.score + (20 + roll1) + (10 + roll1 + roll2) + (roll1 + roll2)
             }

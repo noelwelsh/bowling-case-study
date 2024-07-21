@@ -24,7 +24,7 @@ object FinalFrame {
 
   def open(roll1: Int, roll2: Int): FinalFrame =
     if (roll1 >= 0 && roll2 >= 0 && (roll1 + roll2) < 10)
-      Spare(roll1, roll2)
+      Open(roll1, roll2)
     else
       throw new IllegalArgumentException(
         s"Cannot construct a open final frame with rolls $roll1 and $roll2"
